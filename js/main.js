@@ -39,8 +39,12 @@ const root = new Vue({
 	  
 	 
 	},
-	
 
+	created(){
+		setInterval(() => {
+			this.nextClick();
+		}, 3000);
+	},
 	methods:{
 		prevClick(){
 			this.activeImg--
@@ -57,8 +61,6 @@ const root = new Vue({
 		overClick(index){
 			this.activeImg = index
 		},
-		
-			
 	
 	}
 	
